@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-- font settings --*/
+@font-face {
+  font-family: 'acorn';
+  src: url('./fonts/Acorn-SemiBold.ttf') format('truetype'),
+    url('./fonts/Acorn-Medium.ttf') format('truetype'),
+    url('./fonts/Acorn-Bold.ttf') format('truetype'),
+    url('./fonts/Acorn-Regular.ttf') format('truetype');
+
+  /* Add additional font formats if necessary */
+  /* Specify the correct path to the font files */
+}
+
+.name,
+.a,
+.im,
+.con,
+.pro,
+.web,
+.sii,
+.skills {
+  font-family: 'acorn', sans-serif;
+}
+
+body{
+  background-color: #121212;
+}
+
+.arch, .acorn {
+  font-family: 'acorn', sans-serif;
+  font-weight: 100;
+}
+
+.hel {
+  background-color: #121212;
+}
+
+.hello {
+  background-color: #FF4800;
+}
+
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
