@@ -7,15 +7,16 @@ import "./index.css";
 
 const App = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="hel w-full mx-auto px-10 relative z-30 ">
+       {/* h-[calc(100vh-4rem)] Todo */}
+      <div className="w-full "> 
         <Hero />
         <About />
         <Workflow />
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
