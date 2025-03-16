@@ -8,6 +8,7 @@ export default {
         acorn: ["Acorn", "sans-serif"], // Local font for specific use}
       },
       colors: {
+        lb: "#292524",
         primary: "#FFF0DF",
         buttonbg: "#F5E5D4",
         softPink: "#F8EcD4", // Starting color of gradient

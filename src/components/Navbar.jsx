@@ -1,28 +1,69 @@
-import { useState } from "react";
-import imgcode from "../assets/jd@logo.png";
-import { navItems } from "../constants";
-import { Contact } from "lucide-react";
-import { Github } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Contact, Github, Music } from "lucide-react";
 
-const Navbar = () => {
-  return (
-    <nav className="fixed top-0 left-0 bg-primary p-5 w-full">
-      <div className="flex justify-between items-center px-20">
-        {/* Logo */}
-        {/* <img src={imgcode} alt="Logo" className="w-10 h-10" /> */}
-        <h1 className="font-bold font-acorn text-4xl">Jayadeep</h1>
+const NavbarContent = ({ scrolled }) => (
+  <div
+    className={`flex items-center transition-all duration-300  ${
+      scrolled ? "h-12 justify-between px-5" : "h-20 justify-between px-10"
+    }`}
+  >
+    {/* Logo */}
+    <h1
+      className={`font-bold text-lb transition-all duration-300 ${
+        scrolled ? "text-3xl" : "text-4xl"
+      }`}
+    >
+      <Link to="/">JD</Link>
+    </h1>
 
-        <div className="flex gap-7 ">
-          <button>
-            <Github />
-          </button>
+    {/* Not Scrolled */}
+    {!scrolled && (
+      <div className="flex gap-5">
+        <button className="group">
+          <Link to="https://github.com/jayadeep11/" target="_blank">
+            <Github className="transition-all duration-300 group-hover:fill-current" />
+          </Link>
+        </button>
 
-          <button className=" font-bold bg-buttonbg text-2xl p-4 rounded-xl flex items-center gap-2">
-            <Contact />
-            Contact
-          </button>
-        </div>
+        <button className="font-bold bg-buttonbg text-lg p-3 rounded-xl flex items-center gap-2">
+          <Contact />
+          Contact
+        </button>
       </div>
+    )}
+
+    {/* Scrolled */}
+    {scrolled && (
+      <button className="font-bold bg-buttonbg text-lg p-3 rounded-xl flex items-center gap-2">
+        <Music />
+      </button>
+    )}
+  </div>
+);
+
+// Main Navbar Component
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 930);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav
+      className={`fixed top-0 left-1/2 transform -translate-x-1/2 transition-all text-lb ease-in-out duration-300 ${
+        scrolled
+          ? "py-3 bg-primary shadow-lg w-80 top-5 rounded-xl"
+          : "p-5 bg-primary w-full"
+      }`}
+    >
+      <NavbarContent scrolled={scrolled} />
     </nav>
   );
 };
