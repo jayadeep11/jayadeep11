@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Contact, Github } from "lucide-react";
 import AudioPlayer from "./AudioPlayer";
 import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { BsReddit } from "react-icons/bs";
 import { CiLinkedin } from "react-icons/ci";
+import { Contact, Github } from "lucide-react";
 
 const NavbarContent = ({ scrolled }) => {
   const [expanded, setExpanded] = useState(false);

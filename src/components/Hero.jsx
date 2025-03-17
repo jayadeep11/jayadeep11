@@ -10,7 +10,7 @@ const HeroSection = () => {
         {/*   className="absolute  top-20 hidden lg:block right-5 w-full max-w-xs sm:max-w-xs h-auto object-cover" */}
         {/* /> */}
       {/* Name  */}
-      <div className="flex-grow flex flex-col justify-center items-center gap-3">
+      <div className="flex-grow flex flex-col justify-center items-center gap-3 p-3">
         <h1 className="sm:text-9xl text-6xl font-acorn text-center">
           I'm JayAdeep
         </h1>
@@ -19,7 +19,10 @@ const HeroSection = () => {
         </p>
 
         <button className="group hover:bg-black hover:text-primary mt-3 font-bold bg-buttonbg text-lg p-3 rounded-xl b flex items-center gap-2 transition-all duration-300 ">
+      <a href="#about">
+
           About me
+      </a>
           {/* <ArrowRight className="w-5 h-5 hidden group-hover:block transition-all duration-300 ease-in-out" /> */}
         </button>
       </div>
