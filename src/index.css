@@ -13,6 +13,11 @@
     url('./fonts/Acorn-Regular.ttf') format('truetype');
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* default font */
 body {
   font-family: 'Poppins', sans-serif;

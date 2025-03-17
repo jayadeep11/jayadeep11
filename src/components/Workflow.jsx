@@ -3,7 +3,7 @@ import { Programs, } from "../constants";
 
 const Workflow = () => {
   return (
-    <div id="Arch" className="mt-3 lg:m-10 ">
+    <div id="Arch" className="bg-primary mt-3 lg:m-10 ">
       <div className="flex flex-col items-center text-3xl sm:text-6xl ">
         <h2 className="arch text-center mt-6  tracking-wide">
           I am using{" "}<br />
