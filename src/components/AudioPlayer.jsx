@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import song from "./song.mp3";
+import song from "./song.aac";
 import { FaPlayCircle, FaPauseCircle } from "react-icons/fa";
 
 const AudioPlayer = () => {
